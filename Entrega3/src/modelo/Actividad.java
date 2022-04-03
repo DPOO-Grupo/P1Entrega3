@@ -1,21 +1,20 @@
 package modelo;
-
+import java.time.*;
 public class Actividad {
 	
 	private String titulo;
 	private String descripcion;
-	private String fecha;
-	private String horaInicio;
-	private String horaFinal;
+	private LocalDate fecha;
+	private LocalTime horaInicio;
+	private LocalTime horaFinal;
 	private int tiempo;
 	
-	public Actividad(String elTitulo,String laDescripcion, String laFecha, String laHoraInicio,String laHoraFinal, int elTiempo) {
+	public Actividad(String elTitulo,String laDescripcion, LocalDate laFecha,String tipo,String nombrePar, String correo, LocalTime laHoraInicio,LocalTime laHoraFinal) {
 		this.titulo = elTitulo;
 		this.descripcion = laDescripcion;
 		this.fecha = laFecha;
 		this.horaInicio = laHoraInicio;
 		this.horaFinal = laHoraFinal;
-		this.tiempo = elTiempo;
 	}
 	
 	public String darTitulo() {
@@ -24,13 +23,13 @@ public class Actividad {
 	public String darDescripcion() {
 		return descripcion;
 	}
-	public String darFecha() {
+	public LocalDate darFecha() {
 		return fecha;
 	}
-	public String darHoraInicio() {
+	public LocalTime darHoraInicio() {
 		return horaInicio;
 	}
-	public String darHoraFinal() {
+	public LocalTime darHoraFinal() {
 		return horaFinal;
 	}
 	public int darTiempo() {
